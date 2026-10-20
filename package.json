@@ -1,0 +1,12 @@
+{
+  "name": "sushi-catering-website",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["frontend/web"],
+  "scripts": {
+    "dev": "npm --workspace frontend/web run dev",
+    "build": "npm --workspace frontend/web run build",
+    "typecheck": "npm --workspace frontend/web run typecheck",
+    "check": "npm run typecheck && npm run build"
+  }
+}
