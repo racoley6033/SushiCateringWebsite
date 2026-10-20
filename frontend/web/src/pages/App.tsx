@@ -24,7 +24,7 @@ function App() {
       <a className="brand" href="#home" aria-label="Coast and Country Sushi home"><span className="brand-mark">鮨</span><span>COAST <span className="brand-dot">&amp;</span> COUNTRY<span className="brand-small">SUSHI CATERING</span></span></a>
       <button className="menu-toggle" aria-label={navOpen ? 'Close menu' : 'Open menu'} onClick={() => setNavOpen(!navOpen)}>{navOpen ? <X/> : <Menu/>}</button>
       <nav className={navOpen ? 'nav nav-open' : 'nav'} aria-label="Main navigation">
-        <a href="#approach" onClick={() => setNavOpen(false)}>Our approach</a><a href="#occasions" onClick={() => setNavOpen(false)}>Catering</a><a href="#area" onClick={() => setNavOpen(false)}>Service area</a>
+        <a href="#approach" onClick={() => setNavOpen(false)}>Our approach</a><a href="/packages.html">Packages</a><a href="#occasions" onClick={() => setNavOpen(false)}>Catering</a><a href="#area" onClick={() => setNavOpen(false)}>Service area</a>
         <a className="nav-cta" href="#inquire" onClick={() => setNavOpen(false)}>Plan your gathering <ArrowUpRight size={15}/></a>
       </nav>
     </header>
