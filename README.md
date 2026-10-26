@@ -1,6 +1,6 @@
-# Coast & Country Sushi Co.
+# Coast Sushi Catering
 
-A responsive sushi catering website concept for the South Carolina coast and Pee Dee, serving Pawleys Island, Murrells Inlet, Myrtle Beach, North Myrtle Beach, Conway, and Florence.
+A responsive private-chef omakase website serving Pawleys Island, Murrells Inlet, Myrtle Beach, North Myrtle Beach, and Conway. The experience is ten courses at $160 per guest, with at least 14 days’ notice.
 
 The site uses React, TypeScript, and Vite. Food photography is from the chef's uploaded portfolio and is optimized as WebP for the website.
 
@@ -21,6 +21,8 @@ The site uses React, TypeScript, and Vite. Food photography is from the chef's u
 
 Create a feature branch for each change, commit the work, and open a pull request against `main`. GitHub Actions runs `npm run check` on pull requests and pushes to `main`. Review the checks and the website changes before merging.
 
-## Before launch
+## Booking status and launch planning
 
-Confirm the final business name, menu and package details, pricing, booking availability, service radius, and customer contact method. The event form is a preview and does not send or store inquiries until it is connected to a booking destination.
+The form validates the 14-day lead time, calculates a base estimate, and collects contact details, event address, preferences, allergies, and setup notes. Visitors can review and download their request. It does **not** send or store inquiries, reserve dates, order fish, or collect payment. A reliable delivery destination and business approval workflow are still required.
+
+See [the launch plan](docs/omakase-launch.md) for issue-by-issue progress, remaining decisions, follow-up questions, and marketing recommendations.
