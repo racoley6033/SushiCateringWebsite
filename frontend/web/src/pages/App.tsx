@@ -1,13 +1,10 @@
 import { useState } from 'react'
 import { ArrowDown, ArrowRight, ArrowUpRight, Check, ChevronDown, Menu, MapPin, Minus, Plus, Sparkles, Waves, X } from 'lucide-react'
 
+import { experiences } from '../experiences'
+
 const serviceAreas = ['Pawleys Island', 'Murrells Inlet', 'Myrtle Beach', 'North Myrtle Beach', 'Conway', 'Florence']
 
-const packages = [
-  { n: '01', title: 'The gathering', text: 'A welcoming spread for birthdays, family celebrations, and evenings with friends.', note: 'Intimate events' },
-  { n: '02', title: 'The celebration', text: 'A generous sushi table designed to be the centerpiece of your special occasion.', note: 'Milestones & parties' },
-  { n: '03', title: 'The table', text: 'A considered menu for team dinners, client events, and memorable work gatherings.', note: 'Business & events' },
-]
 
 function App() {
   const [navOpen, setNavOpen] = useState(false)
@@ -49,7 +46,7 @@ function App() {
       <div className="ticker"><div className="ticker-track">SUSHI FOR GATHERINGS <span>✳</span> MADE FOR SHARING <span>✳</span> LOCAL TO THE CAROLINAS <span>✳</span> SUSHI FOR GATHERINGS <span>✳</span></div></div>
 
       <section id="approach" className="intro section-grid">
-        <p className="eyebrow section-label">01 / THE IDEA</p><div><h2>Good food has a way<br/>of making <em>moments.</em></h2><p className="body-copy">A celebration deserves more than a tray dropped at the door. Our vision is a sushi experience that feels considered from the first bite to the last guest at the table — grounded in local hospitality and made to bring people together.</p><a className="text-link dark-link" href="#occasions">See what we’re planning <ArrowRight size={15}/></a></div>
+        <p className="eyebrow section-label">01 / THE IDEA</p><div><h2>Good food has a way<br/>of making <em>moments.</em></h2><p className="body-copy">A celebration deserves more than a tray dropped at the door. Our vision is a sushi experience that feels considered from the first bite to the last guest at the table — grounded in local hospitality and made to bring people together.</p><a className="text-link dark-link" href="#occasions">Explore our experiences <ArrowRight size={15}/></a></div>
       </section>
 
       <section className="food-gallery" aria-labelledby="gallery-title">
@@ -63,8 +60,8 @@ function App() {
       </section>
 
       <section id="occasions" className="occasions">
-        <div className="section-head"><div><p className="eyebrow">03 / MADE FOR YOUR MOMENT</p><h2>A good fit for<br/><em>getting together.</em></h2></div><p className="head-note">From a backyard celebration to a table full of colleagues, we’re shaping catering around the way people gather.</p></div>
-        <div className="package-grid">{packages.map(p=><article className="package-card" key={p.n}><div className="card-top"><span>{p.n}</span><ArrowUpRight size={17}/></div><div><p className="card-note">{p.note}</p><h3>{p.title}</h3><p>{p.text}</p></div><div className="card-bottom"><span>LET’S MAKE A PLAN</span><ArrowRight size={15}/></div></article>)}</div>
+        <div className="section-head"><div><p className="eyebrow">03 / MADE FOR YOUR MOMENT</p><h2>A good fit for<br/><em>getting together.</em></h2></div><p className="head-note">From a backyard celebration to a table full of colleagues, choose a private dinner, omakase, or a party spread built around your roll selections.</p></div>
+        <div className="package-grid">{experiences.map(p=><article className="package-card" key={p.id}><div className="card-top"><span>{p.id}</span><ArrowUpRight size={17}/></div><div><p className="card-note">{p.label}</p><h3>{p.name}</h3><p>{p.price}</p></div><div className="card-bottom"><a href="/packages.html">Explore this experience</a><ArrowRight size={15}/></div></article>)}</div>
       </section>
 
       <section className="quote-band"><div className="quote-mark">“</div><blockquote>Gather close.<br/><em>Pass the good stuff.</em></blockquote><div className="quote-foot"><span>A BETTER KIND OF CATERED TABLE</span><span>GRAND STRAND · PEE DEE</span></div></section>
@@ -75,7 +72,7 @@ function App() {
         <form className="inquiry-form" onSubmit={submitInquiry}>
           {submitted ? <div className="form-success"><span className="success-icon"><Check size={22}/></span><h3>Thanks for sharing.</h3><p>Your event details are ready for this preview. Booking contact will be added before launch.</p><button type="button" className="text-link dark-link" onClick={()=>setSubmitted(false)}>Edit your details <ArrowRight size={15}/></button></div> : <>
             <label>Your name<input name="name" required placeholder="How should we address you?"/></label>
-            <label>What are you celebrating?<select name="occasion" defaultValue=""><option value="" disabled>Select an occasion</option><option>Birthday or family celebration</option><option>Wedding or milestone</option><option>Work event</option><option>Something else</option></select><ChevronDown className="select-icon" size={16}/></label>
+            <label>What are you celebrating?<select name="occasion" defaultValue=""><option value="" disabled>Select an occasion</option><option>Private Sushi Dinner</option><option>Omakase Experience</option><option>Private Dinner for Two</option><option>Family Dinner</option><option>Birthday or corporate party</option><option>Wedding or milestone</option><option>Work event</option><option>Something else</option></select><ChevronDown className="select-icon" size={16}/></label>
             <div className="form-row"><label>Event date<input name="date" type="date"/></label><label>Estimated guests<div className="stepper"><button type="button" aria-label="Decrease guest count" onClick={()=>setCount(Math.max(2,count-1))}><Minus size={14}/></button><span>{count}</span><button type="button" aria-label="Increase guest count" onClick={()=>setCount(count+1)}><Plus size={14}/></button></div></label></div>
             <label>Where will you gather?<input name="location" placeholder="City or neighborhood"/></label>
             <button className="button button-dark submit-button" type="submit">Share your event details <ArrowRight size={16}/></button><p className="form-note">Preview only — inquiry delivery will be connected before the site launches.</p>
