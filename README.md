@@ -1,6 +1,6 @@
-# Coast Sushi Service
+# Coast & Country Sushi Co.
 
-A responsive sushi catering website serving Myrtle Beach, North Myrtle Beach, Conway, and the surrounding Grand Strand.
+A responsive sushi catering website concept for the South Carolina coast and Pee Dee, serving Pawleys Island, Murrells Inlet, Myrtle Beach, North Myrtle Beach, Conway, and Florence.
 
 The site uses React, TypeScript, and Vite. Food photography is from the chef's uploaded portfolio and is optimized as WebP for the website.
 
@@ -21,6 +21,6 @@ The site uses React, TypeScript, and Vite. Food photography is from the chef's u
 
 Create a feature branch for each change, commit the work, and open a pull request against `main`. GitHub Actions runs `npm run check` on pull requests and pushes to `main`. Review the checks and the website changes before merging.
 
-## Booking inquiries
+## Before launch
 
-The inquiry forms open a prefilled email to coastsushiservice@gmail.com in the visitor’s email app. Visitors must review and send the draft; the site does not automatically deliver or store requests. Phone contact is available at 843-251-2291. Dates are reserved only after availability, menu, quote, deposit, and cancellation terms are agreed.
+Confirm the final business name, menu and package details, pricing, booking availability, service radius, and customer contact method. The event form is a preview and does not send or store inquiries until it is connected to a booking destination.
